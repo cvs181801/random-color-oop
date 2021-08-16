@@ -3,12 +3,14 @@ const ball = document.querySelector(".ball");
 
 //make a way to generate a random number 1 - 6 
 
-const randomNumber = function randomNum() {
-    Math.floor(Math.random * 6);
+function randomNum() {
+    return Math.floor(Math.random() * 6 ) + 1;
 }
 
-console.log(randomNumber);
+console.log(randomNum());
 
-// function pickColor() {
-//     case randomNumber === 0
-// }
+class Ghost {
+    constructor(color) {
+        this.color = color;
+    }
+}
