@@ -10,4 +10,16 @@
 
 body {
     margin: 0 auto;
+
+}
+
+.ball {
+    width: 4em;
+    height: 4em;
+    border: 1px solid magenta;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+    top: 11.5em;
+    left: 11.5em;
 }
