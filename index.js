@@ -1,6 +1,6 @@
 //grab elements from DOM
-const ball = document.querySelector(".ball");
-
+const shape = document.querySelector(".shape");
+const faces = document.querySelectorAll(".face");
 
 
 class Ghost {
@@ -36,3 +36,10 @@ console.log("random color = " + color);
 const ghostie = new Ghost(color);
 
 console.log(ghostie.color);
+
+shape.addEventListener('mouseover', function(e) {
+    e.preventDefault();
+    for (face of faces) {
+        face.style.backgroundColor = `${ghostie.color}`;
+    }
+})
