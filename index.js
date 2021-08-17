@@ -32,14 +32,30 @@ if (randomNum() === 1) {
 }
 
 console.log("random color = " + color);
-
 const ghostie = new Ghost(color);
-
 console.log(ghostie.color);
+
+function makeColorChange() {
+    return randomNum();
+}
+
+
 
 shape.addEventListener('mouseover', function(e) {
     e.preventDefault();
+    x = e.pageX;
+    y = e.pageY;
+    console.log(x);
+    
+    //makeColorChange();
     for (face of faces) {
         face.style.backgroundColor = `${ghostie.color}`;
-    }
-})
+        face.style.left = `${x -1 }` + "em";
+        }
+        //window.location.reload();
+    })
+    // shape.addEventListener('mouseout', function(e) {
+    //     for (face of faces) {
+    //         face.style.backgroundColor = `${ghostie.color}`;
+    //     }
+    //})
