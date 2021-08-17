@@ -39,23 +39,22 @@ function makeColorChange() {
     return randomNum();
 }
 
+console.log(makeColorChange());
 
-
-shape.addEventListener('mouseover', function(e) {
+shape.addEventListener('mouseenter', function(e) {
     e.preventDefault();
-    x = e.pageX;
-    y = e.pageY;
-    console.log(x);
-
-    //makeColorChange();
+    //x = e.pageX;
+    //y = e.pageY;
+    console.log("e listener worked");
     for (face of faces) {
         face.style.backgroundColor = `${ghostie.color}`;
         //face.style.left = `${x -1 }` + "em";
-        face.style.left = x + "px";
-        face.style.top = y + "px";
+        //face.style.left = x + "px";
+        //face.style.top = y + "px";
         face.style.transition = "transform ease 1s";
         }
 
+    //return makeColorChange();
         //window.location.reload();
     })
     // shape.addEventListener('mouseout', function(e) {
@@ -63,3 +62,10 @@ shape.addEventListener('mouseover', function(e) {
     //         face.style.backgroundColor = `${ghostie.color}`;
     //     }
     //})
+    
+
+    shape.addEventListener('mouseout', function(e) {
+        e.preventDefault();
+        window.location.reload();
+       
+        })
