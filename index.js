@@ -46,12 +46,16 @@ shape.addEventListener('mouseover', function(e) {
     x = e.pageX;
     y = e.pageY;
     console.log(x);
-    
+
     //makeColorChange();
     for (face of faces) {
         face.style.backgroundColor = `${ghostie.color}`;
-        face.style.left = `${x -1 }` + "em";
+        //face.style.left = `${x -1 }` + "em";
+        face.style.left = x + "px";
+        face.style.top = y + "px";
+        face.style.transition = "transform ease 1s";
         }
+
         //window.location.reload();
     })
     // shape.addEventListener('mouseout', function(e) {
